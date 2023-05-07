@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+
+   jupyter_playground:
+     build: ./jupyter_playground
+     environment:
+       - JUPYTER_TOKEN=easy
+     ports:
+       - "8889:8888"
+     volumes:
+       - ./jupyter_playground/playground:/home/jovyan/work
