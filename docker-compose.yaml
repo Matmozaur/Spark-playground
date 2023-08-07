@@ -2,11 +2,24 @@ version: "3"
 
 services:
 
-   jupyter_playground:
-     build: ./jupyter_playground
+#   jupyter_playground:
+#     build: ./jupyter_playground
+#     environment:
+#       - JUPYTER_TOKEN=easy
+#     ports:
+#       - "8889:8888"
+#     volumes:
+#       - ./jupyter_playground/playground:/home/jovyan/work
+   playground_streaming:
+     build: jupyter_playground_streaming
      environment:
        - JUPYTER_TOKEN=easy
      ports:
        - "8889:8888"
      volumes:
-       - ./jupyter_playground/playground:/home/jovyan/work
+       - ./jupyter_playground_streaming:/home/jovyan/work
+     networks:
+       - coin-net
+
+networks:
+  coin-net:
