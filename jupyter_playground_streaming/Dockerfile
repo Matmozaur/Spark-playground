@@ -23,4 +23,3 @@ RUN sbt clean assembly && \
 FROM base
 
 COPY --from=builder /coinbase-spark/target/scala-2.12/coinbase-spark-assembly-0.1.0-SNAPSHOT.jar /usr/local/spark/jars
-#COPY Notebook.ipynb work/

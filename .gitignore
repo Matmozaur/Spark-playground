@@ -128,3 +128,4 @@ dmypy.json
 # Pyre type checker
 .pyre/
 /jupyter_playground/playground/apache_logs
+/jupyter_playground/playground/AGH-notebooks/apache_logs
